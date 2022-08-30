@@ -12,6 +12,6 @@ const basketSchema = mongoose.Schema({
     total: Number
 })
 
-const Basket = mongoose.model('Drugs', basketSchema)
+const Basket = mongoose.model('Basket', basketSchema)
 
 module.exports = Basket
