@@ -7,6 +7,7 @@ module.exports.drugsController = {
   },
   addDrugs: async (req, res) => {
     const data = await Drugs.create({
+      image: req.body.image,
       name: req.body.name,
       price: req.body.price,
       category: req.body.category,

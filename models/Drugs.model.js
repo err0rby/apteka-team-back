@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 
 const drugsSchema = mongoose.Schema({
+  image: String,
   name: String,
   price: Number,
   category: {
