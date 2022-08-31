@@ -9,7 +9,10 @@ const basketSchema = mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Drugs'
     }],
-    total: Number
+    total: {
+        type: Number,
+        default: 0
+    }
 })
 
 const Basket = mongoose.model('Basket', basketSchema)
