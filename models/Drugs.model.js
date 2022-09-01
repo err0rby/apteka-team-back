@@ -4,6 +4,7 @@ const drugsSchema = mongoose.Schema({
   image: String,
   name: String,
   price: Number,
+  discription: String,
   category: {
     type: mongoose.SchemaTypes.ObjectId,
     ref: "Category",
