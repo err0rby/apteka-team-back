@@ -9,7 +9,6 @@ module.exports.userController = {
             const { login, password } = req.body
             const hash = bcrypt.hashSync(password, 10);
             const user = await User.create({ login: login, password: hash });
-            await Basket.create({user: user._id})
             res.json(user)
         } catch (error) {
             res.json({ error: error + "asdasdasdasdas" })
