@@ -9,6 +9,10 @@ const drugsSchema = mongoose.Schema({
     type: mongoose.SchemaTypes.ObjectId,
     ref: "Category",
   },
+  inBasket: {
+    type: Number,
+    default: 0
+  }
 });
 
 const Drugs = mongoose.model("Drugs", drugsSchema);
