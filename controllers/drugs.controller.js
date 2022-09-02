@@ -14,4 +14,15 @@ module.exports.drugsController = {
     });
     await res.json(data);
   },
+  amountPatch: async (req, res) =>{
+    try {
+      const amount = await Drugs.findByIdAndUpdate(req.body.drugId, {
+        inBasket: req.body.amount
+      })
+      res.json(amount)
+    } catch (e) {
+      res.json(e.toString())
+    }
+  }
+  
 };
