@@ -17,7 +17,7 @@ module.exports.userController = {
 
     getUser: async (req, res) => {
         try {
-            const data = await User.find();
+            const data = await User.find().populate('basket')
             res.json(data)
         } catch (error) {
             res.json(error)
