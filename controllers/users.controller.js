@@ -51,5 +51,12 @@ module.exports.userController = {
         } catch (error) {
             res.json(error)
         }
+    },
+    
+    deleteBasket: async (req, res) => {
+       const data =  await User.findByIdAndUpdate(req.params.id, {
+            $set: { basket: [] }
+        })
+        res.json(data)
     }
 }
