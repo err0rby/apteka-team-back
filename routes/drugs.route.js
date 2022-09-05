@@ -7,5 +7,4 @@ router.post("/drugs", drugsController.addDrugs);
 router.patch('/amountPlus', drugsController.amountPatch)
 router.patch('/amountMinus', drugsController.amountPatch)
 
-
 module.exports = router;

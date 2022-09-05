@@ -30,6 +30,4 @@ module.exports.basketController = {
             res.status(401).json(e.toString())
         }
     }
-
-
 }
