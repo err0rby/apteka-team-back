@@ -16,5 +16,4 @@ const basketSchema = mongoose.Schema({
 })
 
 const Basket = mongoose.model('Basket', basketSchema)
-
 module.exports = Basket
